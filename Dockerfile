@@ -1,3 +1,6 @@
+FROM curlimages/curl
+COPY /bin/curl /bin/curl
+
 FROM hashicorp/packer:1.5.4
 
 LABEL "com.github.actions.name" = "Packer build"
