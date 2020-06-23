@@ -9,6 +9,8 @@ LABEL "repository" = "https://github.com/imcitius/packer-build-action"
 LABEL "homepage" = "https://github.com/imcitius/packer-build-action"
 LABEL "maintainer" = "Ilya Rubinchik <cit@2cit.ru>"
 
+RUN curl https://get.docker.com/ | sh
+
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
