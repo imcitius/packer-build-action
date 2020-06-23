@@ -1,5 +1,5 @@
 FROM curlimages/curl
-COPY /bin/curl /bin/curl
+COPY /usr/bin/curl /usr/bin/curl
 
 FROM hashicorp/packer:1.5.4
 
@@ -12,7 +12,7 @@ LABEL "repository" = "https://github.com/imcitius/packer-build-action"
 LABEL "homepage" = "https://github.com/imcitius/packer-build-action"
 LABEL "maintainer" = "Ilya Rubinchik <cit@2cit.ru>"
 
-RUN curl https://get.docker.com/ | sh
+RUN /usr/bin/url https://get.docker.com/ | sh
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
