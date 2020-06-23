@@ -1,6 +1,3 @@
-FROM curlimages/curl
-RUN curl https://get.docker.com/ | sh
-
 FROM hashicorp/packer:1.5.4
 
 LABEL "com.github.actions.name" = "Packer build"
@@ -11,7 +8,6 @@ LABEL "com.github.actions.color"="blue"
 LABEL "repository" = "https://github.com/imcitius/packer-build-action"
 LABEL "homepage" = "https://github.com/imcitius/packer-build-action"
 LABEL "maintainer" = "Ilya Rubinchik <cit@2cit.ru>"
-
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
