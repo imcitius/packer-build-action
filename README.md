@@ -8,10 +8,6 @@ This action runs packer build.
 
 **Optional** Packer template file to use for packer build. Default `"packer-template.json"`.
 
-### `varFile`
-
-**Optional** Var file to use for packer build. Default `"packer-vars.json"`.
-
 ### `workingDir`
 
 **Optional** Directory where the packer template and var file reside. Default `"."`.
@@ -38,7 +34,6 @@ jobs:
         uses: riznob/packer-build-action@v1.1
         with:
           templateFile: 'packer-template.json'
-          varFile: 'packer-vars.json'
           workingDir: '.'
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
